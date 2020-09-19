@@ -9,20 +9,20 @@
  * Assign q1 a value of type boolean
  */
 
-const q1 = null;
+const q1 = true;
 
 /**
  * QUESTION 2
  * Assign q2 a value of type number
  */
-const q2 = null;
+const q2 = 6;
 
 
 /**
  * QUESTION 3
  * Assign q3 a value of type string
  */
-const q3 = null;
+const q3 = "Watermelon";
 
 
 /**
@@ -34,22 +34,20 @@ const q3 = null;
 
 
 
-const q4 = null;
-
+const q4 =  0 / 0;
 
 /**
  * QUESTION 5
  * Assign q5 a value of type boolean. Produce the value by performing
  * a comparison operation on two numbers.
  */
-const q5 = null; 
-
+const q5 = 5 >= 5;
 
 /**
  * QUESTION 6
- * Assign q6 a falsey value that is not the boolean false
+ * Assign q6 a false value that is not the boolean false
  */
-const q6 = null;   
+const q6 = 6 < 2;   
 
 /**
  * For use in the next few questions, 
@@ -65,20 +63,21 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
  * 
  * Assign a version of the Gettysburg address converted to all capital letters.
  */
-const q7 = null;
+const q7 = address.toUpperCase();
+
 
 /**
  * QUESTION 8
  * Assign the number of characters in the Gettysburg Address
  */
-const q8 = null;
+const q8 = address.length;
 
 /**
  * QUESTION 8
  * Assign the result of splitting the Gettysburg Address on spaces
  * (use the same variable `address` to get started)
  */
-const q9 = null; 
+const q9 = address.split(" "); 
 
 
 /**
@@ -86,7 +85,7 @@ const q9 = null;
  * Assign q9 the number of words in the Gettysburg Address
  * (use your answer from above)
  */
-const q10 = null; 
+const q10 = q9.length; 
 
 
 /**
@@ -95,8 +94,27 @@ const q10 = null;
  * Loop over that array and build a new array with the periods (.)
  * removed from each word. Assign q11 the result.
  */
-const q11 = null;
 
+let newArray = [];
+for (let word of q9) {
+  const wordNoPeriod = word.replace(".", "");
+  newArray.push(wordNoPeriod);
+}
+
+const q11 = newArray;
+
+/*  TNC
+work => Four.
+wordNoPeriod => ["Four"]
+newArray => ["Four"]
+
+...
+word => groung.
+wordNoPeriod => ground
+newArray => ["Four", "score", ...earth]
+
+TNC
+*/
 
 /**
  * QUESTION 12
@@ -104,14 +122,42 @@ const q11 = null;
  * with no punctuation. Loop over that array and create a new array of each
  * word's length. Assign q11 the result.
  */
-const q12 = null; 
+
+wordLengthArray = [];
+for (let word of q11) {
+
+  const newWordLength = word.length;
+  wordLengthArray.push(newWordLength);
+}
+
+const q12 = wordLengthArray; 
+
 
 /**
  * QUESTION 13
  * Using the array created in question twelve, calculate the average word length
  * the Gettysburg address. Assign q13 the result.
  */
-const q13 = null;
+
+let gettyAddressTotal = 0;
+for(let length of q12) {
+
+    gettyAddressTotal += length;
+}
+
+let gettyAddressAverage = gettyAddressTotal / q12.length;
+
+
+
+const q13 = gettyAddressAverage;
+
+/*  When you do  "for ()" what you are doing is your setting up a variable for each item in the array.  "Of" get me each item in the array and set it to the variable that I just declared (ex: ("let length of q12"). Remember ti always check to see what you put to make sure its consistent. 
+
+When we have the item "q12.length" we are saying get the length property of q12; what is the length of q12? When you have q12.push(5) your saying add 5 to the end of q12.
+
+Make sure all corresponding "let's" and "const" names are the same.
+ */
+
 
 module.exports = {
   q1,
