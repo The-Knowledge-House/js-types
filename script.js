@@ -104,12 +104,12 @@ for (let word of q9) {
 const q11 = newArray;
 
 /*  TNC
-work => Four.
+word => Four.
 wordNoPeriod => ["Four"]
 newArray => ["Four"]
 
 ...
-word => groung.
+word => ground.
 wordNoPeriod => ground
 newArray => ["Four", "score", ...earth]
 

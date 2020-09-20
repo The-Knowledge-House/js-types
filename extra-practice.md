@@ -12,66 +12,76 @@ For each expression, predict what you think the output will be in a comment (`//
 typeof("potato")
 // Prediction: Vegetable
 // Actual: String
+
+The "typeof" operator returns the data type of its operand in the form of a string. The operand can be any object, function, or variable.
 ```
 
 What is the output of each of the expressions below?
 
 ```js
 typeof(15)
-// Prediction:
-// Actual:
+// Prediction: number
+// Actual:  Number
 
 typeof(5.5)
-// Prediction:
-// Actual:
+// Prediction: Decimal	
+// Actual: Number 
 
 typeof(NaN)
-// Prediction:
-// Actual:
+// Prediction: function
+// Actual:   Number
 
 typeof("hello")
-// Prediction:
-// Actual:
+// Prediction: Word	
+// Actual: String
 
-typeof(true)
-// Prediction:
-// Actual:
+typeof(true)  	
+// Prediction:  Word
+// Actual:  Boolean
 
 typeof(1 != 2)
-// Prediction:
-// Actual:
+// Prediction:  Numbers
+// Actual:   Boolean
 
 
 "hamburger" + "s"
-// Prediction:
-// Actual:
+// Prediction:  words and a letter
+// Actual:  String
 
 "hamburgers" - "s"
-// Prediction:
-// Actual:
+// Prediction:  words minus a letter
+// Actual:  String
 
 "1" + "3"
-// Prediction:
-// Actual:
+// Prediction:  Addition
+// Actual:  Addition of strings
 
 "1" - "3"
-// Prediction:
-// Actual:
+// Prediction:  Subtraction
+// Actual:  Subtraction of Strings
 
 "johnny" + 5
-// Prediction:
-// Actual:
+// Prediction:  Words plus number
+// Actual:  String plus a number
 
 "johnny" - 5
-// Prediction:
-// Actual:
+// Prediction:  Words minus a number 
+// Actual:  String minus a number 
 
 99 * "luftbaloons"
-// Prediction:
-// Actual:
+// Prediction: A number and an asterisk in front of a word
+// Actual:  A generator for the word luftbaloons
+
+/* The asterisk indicates that the function is a generator and the yield keyword which pauses function execution
+
+Generator Function — defined with an asterisk near the function name or keyword
+Generator Iterator — created when you invoke the Generator Function  */
 ```
 
 What's going on in the second half of the previous question? Are there any "rules" we can pull from those examples?
+
+Generator Function — defined with an asterisk near the function name or keyword
+Generator Iterator — created when you invoke the Generator Function
 
 ## Data Structures
 
@@ -81,41 +91,113 @@ What's going on in the second half of the previous question? Are there any "rule
 
 Javascript provides us with a number of native methods that allow us to interact with arrays. Find methods that do each of the following and provide an example...
 * Add an element to the back of an array.
+
+var greetings = [
+  'Hello',
+  'Bonjour'
+];
+greetings.push('Hola');
+console.log(greetings);
+'Hello, Bonjour, Hola';
+
+
+
 * Remove an element from the back of an array.
+
+var names = [Mary, Jane, Sue, Jenny];
+names.length = 2; 
+console.log( names ); 
+'Mary', 'Jane', 'Sue';
+
+
+
 * Add an element to the front of an array.
+
+let numbers = [10, 20, 30, 40];
+numbers.unshift(5, 7);
+console.log(numbers);
+5,7, 10, 20, 30, 40;
+
+
+
 * Remove an element from the front of an array.
+
+let months = ['Jan', 'Feb', 'March', 'April'];
+months.shift(); 
+console.log(months); 
+'Feb', 'March', 'April';
+
+
+
 * Concatenates all the elements in an array into a string.
+
+const words = ['I', 'want', 'a', 'new', 'dog'];
+const myWords = words.join(WOOF);
+console.log(myWords);
+'IWOOFwantWOOFaWOOFnewWOOFdogWOOF';
+
+
+
 * Separates the characters of a string into an array. This one is a string method.
 
 > This is a great exercise for practicing your "Google Fu"! If you need a starting point, check out [MDN's documentation page on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
 ```js
 // Your answers go here.
+
 ```
+JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area.
+
 
 What will the contents of the below arrays be after the code samples are executed? Come up with an answer yourself before testing it out in the console.
 
 ```js
-let numbers = [2, 4, 6, 8]
-numbers.pop()
-numbers.push(10)
-numbers.unshift(3)
+let numbers = [2, 4, 6, 8];
+numbers.pop();
+console.log(numbers);
+2, 4, 6;
+
+numbers.push(10);
+console.log(numbers);
+2, 4, 6, 8, 10;
+
+
+numbers.unshift(3);
+console.log(numbers);
+3, 2, 4, 6, 8;
 ```
 
 ```text
 Your answer goes here.
-```
+
+let text = ['big', 'fat', brown', 'fox'];
+text.pop();
+console.log(text);
+'big,' 'fat', 'brown';
+
+text.push(burps);
+console.log(text);
+'big', 'fat', 'brown', 'fox', 'burps';
+
+
+text.unshift(Totally);
+console.log(text);
+'Totally', 'big', 'fat', 'brown', 'fox';
 
 What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
 
 ```js
-let morse = ["dot", "pause", "dot"]
-let moreMorse = morse.join(" dash ")
+let morse = ["dot", "pause", "dot"];
+let moreMorse = morse.join(" dash ");
 moreMorse.split(" ")
 ```
 
 ```text
 Your answer goes here.
+
+moreMorse = 'dot, 'dash', 'pause', 'dash', 'dot';
+
+moreMorse = 'dotpausedot'; 
 ```
 
 What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
@@ -133,6 +215,26 @@ bands[1][3] = "Ringo"
 
 ```text
 Your answer goes here.
+
+bands.push(beatles);
+console.log['Paul', 'John', 'George', 'Pete', 'beatles'];
+
+bands.unshift(stones);
+console.log['stones', 'Brian', 'Mick', Keith, 'Ronnie', 'Charlie'];
+
+bands[bands.length -1].pop();
+console.log['John', 'George'];
+console.log['Mick', 'Keith', 'Ronnie'];
+
+bands[0].shift();
+console.log['George', 'Pete'];
+console.log['Keith', 'Ronnie', 'Charlie'];
+
+bands[1][3] = 'Ringo';
+console.log['Paul', 'George', 'Ringo'];
+console.log["Brian", "Keith", "Charlie", 'Ringo'];
+
+
 ```
 
 ## Booleans & Comparison Operators
@@ -152,30 +254,30 @@ Fill out the truth tables below for `&&` (and), `||` (or) and one that uses mult
 
 | a | b | a AND b |
 | --- | --- | --- |
-| true | true | ? |
-| true | false | ? |
-| false | true | ? |
-| false | false | ? |
+| true | true | TRUE |
+| true | false | FALSE |
+| false | true | FALSE |
+| false | false | FALSE |
 
 |a|b|a OR b|
 |---|---|---|
-|true|true|?|
-|true|false|?|
-|false|true|?|
-|false|false|?|
+|true|true|TRUE|
+|true|false|TRUE|
+|false|true|TRUE|
+|false|false|TRUE|
 
 |a|b|a `!=` b|
 |---|---|---|
-|3|3|?|
-|1|5|?|
-|2|"2"|?|
+|3|3|TRUE|
+|1|5|FALSE|
+|2|"2"|FALSE|
 
 |a|b|!a AND (a OR b)|
 |---|---|---|
-|true|true|?|
-|true|false|?|
-|false|true|?|
-|false|false|?|
+|true|true|TRUE|
+|true|false|TRUE|
+|false|true|TRUE|
+|false|false|FALSE|
 
 ## Conditionals
 
@@ -187,6 +289,24 @@ You're a bouncer at a bar. Given an `age` variable, create a conditional that sa
 
 ```js
 // Your answer goes here.
+
+let age = newBar().getAge();
+if (age > 21){
+	greeting = "Come on in!" {
+		}else if (age >= 18 || <= 21) {
+			greeting = "Come on in (but no drinking)!" {
+				}else if (age < 18) {
+		greeting = "You're too young to be here!" {
+		}else (age >= 75) {
+		greeting = "Are you sure you want to be here?";		
+		     	}
+			}
+		}
+	}		
+		
+	
+
+
 ```
 
 #### Bonus
@@ -197,12 +317,21 @@ Bar patrons must have an ID if the bouncer is even going to consider what age th
 
 > Hint: Whether the patron has an ID or not can be stored in a `hasId` variable. What do you think the stored data type should be?
 
+let = noId 
+
 ## Loops
 
 Your task is to create a loop that prints out all the odd numbers between 1 and 100...twice! Your solution must use one `for` loop and one `while` loop.
 
 ```js
 // Your answer goes here.
+
+var i = 0;
+for (let i = 1; i <= 100; i+=2){
+while (i <= 100) {
+  console.log(i);
+  
+}
 ```
 
 #### Bonus
