@@ -18,61 +18,61 @@ What is the output of each of the expressions below?
 
 ```js
 typeof(15)
-// Prediction:
-// Actual:
+// Prediction: number
+// Actual: number
 
 typeof(5.5)
-// Prediction:
-// Actual:
+// Prediction: number
+// Actual: number
 
 typeof(NaN)
-// Prediction:
-// Actual:
+// Prediction: object 
+// Actual: number
 
 typeof("hello")
-// Prediction:
-// Actual:
+// Prediction: string
+// Actual: string
 
 typeof(true)
-// Prediction:
-// Actual:
+// Prediction: boolean
+// Actual: boolean
 
 typeof(1 != 2)
-// Prediction:
-// Actual:
+// Prediction: false 
+// Actual: boolean
 
 
 "hamburger" + "s"
-// Prediction:
-// Actual:
+// Prediction: hamburgers
+// Actual: hamburgers
 
 "hamburgers" - "s"
-// Prediction:
-// Actual:
+// Prediction: n/a
+// Actual: NaN
 
 "1" + "3"
-// Prediction:
-// Actual:
+// Prediction: 13
+// Actual: 13
 
 "1" - "3"
-// Prediction:
+// Prediction: -2
 // Actual:
 
 "johnny" + 5
-// Prediction:
-// Actual:
+// Prediction: johnny5
+// Actual: johnny5
 
 "johnny" - 5
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 
 99 * "luftbaloons"
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 ```
 
 What's going on in the second half of the previous question? Are there any "rules" we can pull from those examples?
-
+ // A rule that can be taken away from the second half of the questions are, you can't find the mathimatical output of a number and a object. the answer will always turn out NaN. \\
 ## Data Structures
 
 > Data structures include arrays and objects. We will go over objects in a later class.
@@ -80,17 +80,22 @@ What's going on in the second half of the previous question? Are there any "rule
 ### Arrays
 
 Javascript provides us with a number of native methods that allow us to interact with arrays. Find methods that do each of the following and provide an example...
-* Add an element to the back of an array.
-* Remove an element from the back of an array.
-* Add an element to the front of an array.
+* Add an element to the back of an array. 
+* Remove an element from the back of an array. 
+* Add an element to the front of an array. 
 * Remove an element from the front of an array.
-* Concatenates all the elements in an array into a string.
-* Separates the characters of a string into an array. This one is a string method.
+* Concatenates all the elements in an array into a string. 
+* Separates the characters of a string into an array. This one is a string method. 
 
 > This is a great exercise for practicing your "Google Fu"! If you need a starting point, check out [MDN's documentation page on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
 ```js
-// Your answers go here.
+ Add an element to the back of an array. // push().
+* Remove an element from the back of an array.  //pop().
+* Add an element to the front of an array. // unshift().
+* Remove an element from the front of an array.  //shift ().
+* Concatenates all the elements in an array into a string.// toString().
+* Separates the characters of a string into an array. This one is a string method. //split(). 
 ```
 
 What will the contents of the below arrays be after the code samples are executed? Come up with an answer yourself before testing it out in the console.
@@ -103,7 +108,7 @@ numbers.unshift(3)
 ```
 
 ```text
-Your answer goes here.
+ guess - let numbers = [3,4,6,8,10]
 ```
 
 What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
@@ -115,7 +120,8 @@ moreMorse.split(" ")
 ```
 
 ```text
-Your answer goes here.
+guess - [dot, dash, pause, dash, dot]
+
 ```
 
 What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
@@ -132,7 +138,8 @@ bands[1][3] = "Ringo"
 ```
 
 ```text
-Your answer goes here.
+guess - n/a
+answer - Ringo 
 ```
 
 ## Booleans & Comparison Operators
@@ -152,23 +159,23 @@ Fill out the truth tables below for `&&` (and), `||` (or) and one that uses mult
 
 | a | b | a AND b |
 | --- | --- | --- |
-| true | true | ? |
-| true | false | ? |
-| false | true | ? |
-| false | false | ? |
+| true | true | `true`|
+| true | false | `false` |
+| false | true | `false` |
+| false | false | `false` |
 
 |a|b|a OR b|
 |---|---|---|
-|true|true|?|
-|true|false|?|
-|false|true|?|
-|false|false|?|
+|true|true|`true`|
+|true|false|`true`|
+|false|true|`true`|
+|false|false|`false`|
 
 |a|b|a `!=` b|
 |---|---|---|
-|3|3|?|
-|1|5|?|
-|2|"2"|?|
+|3|3|`false`|
+|1|5|`true`|
+|2|"2"|`true`|
 
 |a|b|!a AND (a OR b)|
 |---|---|---|
@@ -176,7 +183,7 @@ Fill out the truth tables below for `&&` (and), `||` (or) and one that uses mult
 |true|false|?|
 |false|true|?|
 |false|false|?|
-
+`n/a`
 ## Conditionals
 
 You're a bouncer at a bar. Given an `age` variable, create a conditional that satisfies the following requirements...
@@ -186,7 +193,17 @@ You're a bouncer at a bar. Given an `age` variable, create a conditional that sa
 * If a patron is older than 75, print out `"Are you sure you want to be here?"`.
 
 ```js
-// Your answer goes here.
+// if (age > 21) {
+ // print = "Come on in!"
+// }
+-------------------------
+// if ( age < 18) {
+  // print = "You're too young to be in here!"
+// }
+------------------------
+// if (age > 75) {
+  // print = "Are you sure you want to be here?"
+// }
 ```
 
 #### Bonus
@@ -202,13 +219,18 @@ Bar patrons must have an ID if the bouncer is even going to consider what age th
 Your task is to create a loop that prints out all the odd numbers between 1 and 100...twice! Your solution must use one `for` loop and one `while` loop.
 
 ```js
-// Your answer goes here.
+// for(i=1;i<1e2;i+=2){console.log(i);}
 ```
 
 #### Bonus
 
 * Try doing this using a single `for` loop
 * Make it so that the first iteration of the loop prints out all odd numbers between 1 and 100 but the second iteration of the loop prints out all of the even numbers between 1 and 100
+- for (var i=1; i <= 100; i++) {
+  if(i % 2 == 0){
+    console.log(i);
+  }
+  }
 
 ## Bonus: Fizz-Buzz
 
@@ -226,7 +248,20 @@ Your output should look something like this...
 ```
 
 ```js
-// Your answer goes here.
+// for (var i=1; i <= 100; i++) {
+  if(i % 3 == 0){
+    console.log(i + "Fizz");
+  }
+  }
+  -------------------------------
+  //for (var i=1; i <= 100; i++) {
+  if(i % 5 == 0){
+    console.log(i + "buzz" );
+  }
+  }
+---------------------------------
+
+
 ```
 
 #### Bonus (for the bonus)
