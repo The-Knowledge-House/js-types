@@ -10,20 +10,22 @@
  */
 
 const q1 = null;
+const q1 = true;
 
 /**
  * QUESTION 2
  * Assign q2 a value of type number
  */
 const q2 = null;
+const q2 = 3;
 
-
+"
 /**
  * QUESTION 3
  * Assign q3 a value of type string
  */
 const q3 = null;
-
+const q3 = "apples";
 
 /**
  * QUESTION 4
@@ -32,24 +34,23 @@ const q3 = null;
  * (i.e. `const q4` = NaN * 5 does not count)
  */
 
-
-
 const q4 = null;
-
+const q4 = "apples" * 5;
 
 /**
  * QUESTION 5
  * Assign q5 a value of type boolean. Produce the value by performing
  * a comparison operation on two numbers.
  */
-const q5 = null; 
-
+const q5 = null;
+const q5 = 3 > 1;
 
 /**
  * QUESTION 6
  * Assign q6 a falsey value that is not the boolean false
  */
-const q6 = null;   
+const q6 = null;
+const q6 = "";
 
 /**
  * For use in the next few questions, 
@@ -66,28 +67,30 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
  * Assign a version of the Gettysburg address converted to all capital letters.
  */
 const q7 = null;
+const q7 = address.toUpperCase();
 
 /**
  * QUESTION 8
  * Assign the number of characters in the Gettysburg Address
  */
 const q8 = null;
+const q8 = address.length;
 
 /**
- * QUESTION 8
+ * QUESTION 9
  * Assign the result of splitting the Gettysburg Address on spaces
  * (use the same variable `address` to get started)
  */
-const q9 = null; 
-
+const q9 = null;
+const q9 = address.split(" ");
 
 /**
  * QUESTION 9
  * Assign q9 the number of words in the Gettysburg Address
  * (use your answer from above)
  */
-const q10 = null; 
-
+const q10 = null;
+const q10 = address.split(" ").length;
 
 /**
  * QUESTION 10
@@ -96,7 +99,14 @@ const q10 = null;
  * removed from each word. Assign q11 the result.
  */
 const q11 = null;
+const newAddress = address.split(" ");
 
+for (let i = 0; i < newAddress.length; i++) {
+  newAddress[i] = newAddress[i].replace(/\./g, '');
+}
+
+const q11 = newAddress;
+}
 
 /**
  * QUESTION 12
@@ -104,7 +114,13 @@ const q11 = null;
  * with no punctuation. Loop over that array and create a new array of each
  * word's length. Assign q11 the result.
  */
-const q12 = null; 
+const q12 = null;
+let newAddressTwo = [];
+const q12 = newAddressTwo;
+for let i = 0; i < q9.length; i++) {
+  newAddressTwo.push(q9[i].replace(/\./g, '').length)
+}
+
 
 /**
  * QUESTION 13
@@ -112,6 +128,10 @@ const q12 = null;
  * the Gettysburg address. Assign q13 the result.
  */
 const q13 = null;
+let items = wordLength.length;
+let sum = wordLength.reduce((total, amount) => total + amount);
+let mean = sum / items;
+const q13 = mean;
 
 module.exports = {
   q1,
