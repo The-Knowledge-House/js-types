@@ -114,14 +114,27 @@ const q11 = updatedAddress;
  * with no punctuation. Loop over that array and create a new array of each
  * word's length. Assign q11 the result.
  */
-const q12 = null; 
+
+let wordLength = [];
+
+for (let i = 0; i < updatedAddress.length; i++) {
+  wordLength.push(updatedAddress[i].replace(/[.]/g, "").length);
+}
+
+const q12 = wordLength;
 
 /**
  * QUESTION 13
  * Using the array created in question twelve, calculate the average word length
  * the Gettysburg address. Assign q13 the result.
  */
-const q13 = null;
+const add = (a,b) =>
+  a+b
+const sum = wordLength.reduce(add);
+//console.log(sum);
+q13 = sum / wordLength.length;
+//console.log(q13);
+
 
 module.exports = {
   q1,
