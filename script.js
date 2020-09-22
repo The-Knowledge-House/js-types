@@ -131,9 +131,8 @@ const q12 = wordLength;
 const add = (a,b) =>
   a+b
 const sum = wordLength.reduce(add);
-//console.log(sum);
 q13 = sum / wordLength.length;
-//console.log(q13);
+
 
 
 module.exports = {
