@@ -115,8 +115,8 @@ const q12 = q11.map(arrLength => arrLength.length)
  */
 
 let total = 0; 
-let calculation = q12.map(element => element += total); 
-const q13 = calculation / q12.length; 
+let calculation = q12.map(element => total += element); 
+const q13 = total / q12.length; 
 console.log(q13);
 
 
