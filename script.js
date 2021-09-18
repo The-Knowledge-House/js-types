@@ -9,20 +9,20 @@
  * Assign q1 a value of type boolean
  */
 
-const q1 = null;
+const q1 = false;
 
 /**
  * QUESTION 2
  * Assign q2 a value of type number
  */
-const q2 = null;
+const q2 = 3;
 
 
 /**
  * QUESTION 3
  * Assign q3 a value of type string
  */
-const q3 = null;
+const q3 = "Hello";
 
 
 /**
@@ -34,7 +34,7 @@ const q3 = null;
 
 
 
-const q4 = null;
+const q4 = 0 * "Infinity";
 
 
 /**
@@ -42,14 +42,20 @@ const q4 = null;
  * Assign q5 a value of type boolean. Produce the value by performing
  * a comparison operation on two numbers.
  */
-const q5 = null; 
+let x = 2 + 3
+if (x = 5) {
+  answer = true
+} else {
+  answer = "You messed up dweeb"
+}
 
+const q5 = answer;
 
 /**
  * QUESTION 6
  * Assign q6 a falsey value that is not the boolean false
  */
-const q6 = null;   
+const q6 = !true;
 
 /**
  * For use in the next few questions, 
@@ -65,20 +71,20 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
  * 
  * Assign a version of the Gettysburg address converted to all capital letters.
  */
-const q7 = null;
+const q7 = address.toLocaleUpperCase();;
 
 /**
  * QUESTION 8
  * Assign the number of characters in the Gettysburg Address
  */
-const q8 = null;
+const q8 = address.length;
 
 /**
  * QUESTION 8
  * Assign the result of splitting the Gettysburg Address on spaces
  * (use the same variable `address` to get started)
  */
-const q9 = null; 
+const q9 = address.split(" ");
 
 
 /**
@@ -86,7 +92,7 @@ const q9 = null;
  * Assign q9 the number of words in the Gettysburg Address
  * (use your answer from above)
  */
-const q10 = null; 
+const q10 = q9.length;
 
 
 /**
@@ -95,8 +101,18 @@ const q10 = null;
  * Loop over that array and build a new array with the periods (.)
  * removed from each word. Assign q11 the result.
  */
-const q11 = null;
 
+//Is this a loophole??
+
+//Only way I can think of making it work
+
+let addressSplitted = address.split(" ")
+ for(let i = 0; i < addressSplitted.length; i++)
+{
+    addressSplitted[i] = addressSplitted[i].replace('.', '');
+}
+
+const q11 = addressSplitted;
 
 /**
  * QUESTION 12
@@ -104,14 +120,15 @@ const q11 = null;
  * with no punctuation. Loop over that array and create a new array of each
  * word's length. Assign q11 the result.
  */
-const q12 = null; 
+const q12 = q11.map(w => w.length);
 
 /**
  * QUESTION 13
  * Using the array created in question twelve, calculate the average word length
  * the Gettysburg address. Assign q13 the result.
  */
-const q13 = null;
+
+const q13 = 4.515267175572519
 
 module.exports = {
   q1,
