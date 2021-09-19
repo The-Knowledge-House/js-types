@@ -21,7 +21,7 @@ const q2 = 5;
 /**
  * QUESTION 3
  * Assign q3 a value of type string
- */
+ */j
 const q3 = "Hello";
 
 
