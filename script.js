@@ -77,7 +77,7 @@ const q7 = address.toUpperCase();
  * QUESTION 8
  * Assign the number of characters in the Gettysburg Address
  */
-const q8 = address.length();
+const q8 = address.length;
 
 // 'QUESTION 8' is listed twice
 /**
@@ -102,9 +102,7 @@ const q10 = q9.length;
  * Loop over that array and build a new array with the periods (.)
  * removed from each word. Assign q11 the result.
  */
-for (i=0; i < q9.length; i++) {
-  const q11= q9[i].replace(/./, "");
-  };
+const q11 = q9.map(newArr => newArr.split('.').join(""));
 
 
 /**
@@ -113,14 +111,19 @@ for (i=0; i < q9.length; i++) {
  * with no punctuation. Loop over that array and create a new array of each
  * word's length. Assign q11 the result.
  */
-const q12 = null; 
+const q12 = q11.map(arrLength => arrLength.length)
+
 
 /**
  * QUESTION 13
  * Using the array created in question twelve, calculate the average word length
  * the Gettysburg address. Assign q13 the result.
  */
-const q13 = null;
+
+let sum = 0; 
+let littleMath = q12.map(element => sum += element); 
+const q13 = sum / q12.length; 
+
 
 module.exports = {
   q1,
