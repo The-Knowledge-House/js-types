@@ -1,3 +1,5 @@
+//IMPORTANT: Type ls, to find the file to use npm!!!!! OJO
+
 /**
  * All of your answers should be stored in
  * variables matching the question number (q1, q2, etc.)
@@ -9,20 +11,20 @@
  * Assign q1 a value of type boolean
  */
 
-const q1 = null;
+const q1 = true;
 
 /**
  * QUESTION 2
  * Assign q2 a value of type number
  */
-const q2 = null;
+const q2 = 45;
 
 
 /**
  * QUESTION 3
  * Assign q3 a value of type string
  */
-const q3 = null;
+const q3 = "This is a string";
 
 
 /**
@@ -31,10 +33,7 @@ const q3 = null;
  * an operation where neither of the operands are NaN
  * (i.e. `const q4` = NaN * 5 does not count)
  */
-
-
-
-const q4 = null;
+const q4 = NaN;
 
 
 /**
@@ -42,14 +41,14 @@ const q4 = null;
  * Assign q5 a value of type boolean. Produce the value by performing
  * a comparison operation on two numbers.
  */
-const q5 = null; 
+const q5 = 3 > 1 == true; 
 
 
 /**
  * QUESTION 6
  * Assign q6 a falsey value that is not the boolean false
  */
-const q6 = null;   
+const q6 = 4 < 2 == true;   
 
 /**
  * For use in the next few questions, 
@@ -65,37 +64,40 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
  * 
  * Assign a version of the Gettysburg address converted to all capital letters.
  */
-const q7 = null;
+const q7 = address.toUpperCase();
 
 /**
  * QUESTION 8
  * Assign the number of characters in the Gettysburg Address
  */
-const q8 = null;
-
-/**
- * QUESTION 8
- * Assign the result of splitting the Gettysburg Address on spaces
- * (use the same variable `address` to get started)
- */
-const q9 = null; 
-
+const q8 = address.length;
 
 /**
  * QUESTION 9
- * Assign q9 the number of words in the Gettysburg Address
- * (use your answer from above)
+ * Assign the result of splitting the Gettysburg Address on spaces
+ * (use the same variable `address` to get started)
  */
-const q10 = null; 
+const q9 = address.split(' '); 
 
 
 /**
  * QUESTION 10
+ * Assign q9 the number of words in the Gettysburg Address
+ * (use your answer from above)
+ */
+const q10 = address.split(' ').length;
+
+/**
+ * QUESTION 11
  * The array created in question 9 includes periods.
  * Loop over that array and build a new array with the periods (.)
  * removed from each word. Assign q11 the result.
  */
-const q11 = null;
+let q11 = q9
+for (var i=0; i<q9; i++) {
+  q11 = q9.map(w => w.replace(/[.]+/g, ' '));
+  console.log(q11);
+};
 
 
 /**
@@ -104,7 +106,10 @@ const q11 = null;
  * with no punctuation. Loop over that array and create a new array of each
  * word's length. Assign q11 the result.
  */
-const q12 = null; 
+const q12 = word,length; 
+for (var i=0; i<q11.length; i++) {
+  console.log(q11);
+};
 
 /**
  * QUESTION 13
