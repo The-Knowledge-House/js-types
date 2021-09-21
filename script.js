@@ -9,7 +9,7 @@
  * Assign q1 a value of type boolean
  */
 
-const q1 = True;
+const q1 = true;
 
 /**
  * QUESTION 2
@@ -21,7 +21,7 @@ const q2 = 5;
 /**
  * QUESTION 3
  * Assign q3 a value of type string
- */j
+ */
 const q3 = "Hello";
 
 
